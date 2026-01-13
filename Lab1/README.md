@@ -16,5 +16,33 @@ PyTorch là một thư viện mã nguồn mở dùng để lập trình trí tu�
 - Tự động tính Đạo hàm (Autograd).
 - Xây dựng Mạng thần kinh.
 - Tối ưu hóa mô hình.
+### 3. Cách hoạt động của Pytorch  
+import torch
+torch.cuda.is_available()
+import torch
+import numpy as np
+import matplotlib.pyplot as plt
+import pandas as pd
+
+df = pd.read_csv('Iris.csv')
+df
+df.shape
+from sklearn.preprocessing import LabelEncoder
+from sklearn.model_selection import train_test_split
+le = LabelEncoder()
+X = df.drop(['Species'], axis=1).values
+y = le.fit_transform(df['Species'].values)
+
+# Chia dữ liệu với test size = 20%
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+X_train = torch.FloatTensor(X_train)
+X_test = torch.FloatTensor(X_test)
+y_train = torch.LongTensor(y_train).reshape(-1, 1)
+y_test = torch.LongTensor(y_test).reshape(-1, 1)
+len(y_train)
+labels, counts = y_train.unique(return_counts=True)
+print(labels, counts)
+
+nêu cho tôi cách hoạt động chính của pytorch trong code trên
 
 
