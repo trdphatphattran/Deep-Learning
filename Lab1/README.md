@@ -31,6 +31,11 @@ Dòng lệnh y_train.reshape(-1, 1) sử dụng khả năng thay đổi hình d�
 - Nó biến một mảng phẳng thành một cột dọc.  
 - Việc này cực kỳ quan trọng để khi đưa vào mô hình, mỗi nhãn sẽ tương ứng chính xác với một hàng dữ liệu đặc trưng.  
 
+## Phần 2: Các bài tập với Pytorch  
+### Bài 1: 
+Cho y = 5x^5 + 6x^3 - 3x + 1  
+Cho biết độ dốc của đa thức trên ở điểm nào?  
+
 
 
 
