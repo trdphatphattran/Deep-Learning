@@ -76,6 +76,55 @@ Dùng phương pháp Gradient Descent với Learning Rate alpha = 0.1 để cậ
 Kết quả:  
 <img width="386" height="263" alt="image" src="https://github.com/user-attachments/assets/77fe11c6-81cc-4188-a025-3d37429c4fbc" />  
 
+### Bài 3:  
+Tạo một tập dữ liệu giả lập với x là số giờ học ngẫu nhiên từ 1 đến 10 và y là số điểm được tính theo công thức: y = 3x + 5 + noise (với noise là một giá trị ngẫu nhiên nhỏ).  
+
+1. Khởi tạo tham số w và b ngẫu nhiên với requires_grad = True.  
+2. Tính MSE.  
+3. Tính gradient.  
+4. Cập nhật tham số w và b bằng Gradient Descent với Learning Rate alpha = 0.01.  
+5. Lặp lại quá trình trên trong 100 vòng lặp để xem sự hội tụ của mô hình.  
+
+<img width="824" height="716" alt="image" src="https://github.com/user-attachments/assets/b0f3af04-2a78-4d60-b0b8-ba7277ecf097" />  
+
+- Trước hết, cần khởi tạo các dữ liệu:
++ Dữ liệu thực tế (x, y): tạo ra 100 điểm dữ liệu mà bạn đã biết trước quy luật là y = 3x + 5.  
++ Tham số học (w, b): Đây là cái mà máy tính cần tìm. Lúc đầu, ta cho máy tính đoán đại một con số ngẫu nhiên (randn). requires_grad=True báo cho PyTorch phải theo dõi mọi biến đổi của $w$ và $b$ để tính đạo hàm.
+- y_pred = x * w + b: dự đoán, máy tính lấy x (số giờ học) * w rôi cộng sai số b để đưa ra dự đoán (ở vòng lặp đầu tiên w và b ngẫu nhiên nên dự đoán thường sai).
+- mse_loss = torch.mean((y_pred - y)**2): đo lường sự sai sót, nó tính khoảng cách giữa điểm dự đoán và điểm thực tế, sau đó bình phương lên lấy giá trị dương.
+- mse_loss.backward(): nếu ta thay đổi w hoặc b, thì sai số mse_loss sẽ tăng hoặc giảm.
+
+<img width="189" height="120" alt="image" src="https://github.com/user-attachments/assets/bf8ae940-de21-4f06-9644-d6af10f821e1" />  
+
+- Máy tính thực hiện một bước đi nhỏ (kích thước bước là alpha = 0.01) ngược hướng với độ dốc.
++ Nếu độ dốc dương, nó sẽ giảm w.
++ Nếu độ dốc âm, nó sẽ tăng w.
++ zero_(): sau khi xong, nó sẽ xóa hết các tính năng cũ để chuẩn bị cho vòng lặp mới với dữ liệu mới.
+
+Kết quả:  
+<img width="379" height="296" alt="image" src="https://github.com/user-attachments/assets/e5350d6f-3428-4d9e-a42d-35a5e8f25496" />  
+
+### Bài 4:  
+#### TH1:  
+x = torch.from_numpy(arr)  
+print(x)  
+arr[0] = 99  
+print(x)  
+#### TH2:  
+arr = np.arange(0, 5)  
+x = torch.tensor(arr)  
+print(x)  
+arr[0] = 99  
+print(x)  
+
+Hãy giải thích sự khác nhau của 2 trường hợp trên?  
+
+
+
+
+
+
+
 
 
 
