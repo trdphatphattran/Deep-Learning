@@ -106,16 +106,12 @@ Kết quả:
 
 ### Bài 4:  
 #### TH1:  
-x = torch.from_numpy(arr)  
-print(x)  
-arr[0] = 99  
-print(x)  
+<img width="194" height="42" alt="image" src="https://github.com/user-attachments/assets/454a1955-0159-411f-b6f2-b01e1e02248a" />  
+<img width="93" height="37" alt="image" src="https://github.com/user-attachments/assets/2832debf-cac1-4cd4-8f92-29836bbfae26" />  
+
 #### TH2:  
-arr = np.arange(0, 5)  
-x = torch.tensor(arr)  
-print(x)  
-arr[0] = 99  
-print(x)  
+<img width="164" height="57" alt="image" src="https://github.com/user-attachments/assets/dcdeb287-e731-41f2-ae81-adc977dbc47f" />  
+<img width="91" height="41" alt="image" src="https://github.com/user-attachments/assets/5bd926f0-e0af-46e7-b252-a1420c5f2e23" />  
 
 Hãy giải thích sự khác nhau của 2 trường hợp trên?  
 
