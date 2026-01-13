@@ -49,7 +49,16 @@ Cho biết độ dốc của đa thức trên ở điểm nào?
 + -3x = -3.
 + 1' = 0.
 Pytorch cộng dồn lại ra kết quả là 40.
-<img width="291" height="47" alt="image" src="https://github.com/user-attachments/assets/375c5885-0659-4dcc-b574-89c8b07892f8" />  
+<img width="291" height="47" alt="image" src="https://github.com/user-attachments/assets/375c5885-0659-4dcc-b574-89c8b07892f8" />
+
+### Bài 2:  
+Tạo một tensor ban đầu có giá trị là 2  
+Định nghĩa hàm số và tính gradient  
+$$  
+y = x^3 + 2x^2 + 5x + 1  
+$$  
+Hãy tính dy/dx tại giá trị của x?  
+Dùng phương pháp Gradient Descent với Learning Rate alpha = 0.1 để cập nhập giá trị x trong 10 vòng lặp  
 
 
 
