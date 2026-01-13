@@ -162,6 +162,21 @@ Reshape với view as:
 
 <img width="264" height="25" alt="image" src="https://github.com/user-attachments/assets/62c35bbd-287c-489e-97d5-3a4f4326e2e9" />  
 
+## Phần 3: Cách sử dụng  
+1. Cài pytorch (dùng terminal hoặc cmd):  
+pip3 install torch torchvision torchaudio
+
+2. Import thư viện
+import torch
+
+3. Thay đổi tham số
+- Ở mỗi bài tập, ví dụ có thể thay đổi hàm, tham số, ... khác nhau để xem kết quả.
+
+## Phần 4: Tài liệu tham khảo  
+1. Tài liệu lý thuyết + thực hành Van Lang University.
+2. PyTorch Tutorials (https://docs.pytorch.org/tutorials/).  
+3. PyTorch documentation (https://docs.pytorch.org/docs/stable/index.html).  
+
 
 
 
