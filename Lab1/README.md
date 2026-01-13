@@ -54,9 +54,11 @@ Pytorch cộng dồn lại ra kết quả là 40.
 ### Bài 2:  
 Tạo một tensor ban đầu có giá trị là 2  
 Định nghĩa hàm số và tính gradient  
+
 $$  
 y = x^3 + 2x^2 + 5x + 1  
 $$  
+
 Hãy tính dy/dx tại giá trị của x?  
 Dùng phương pháp Gradient Descent với Learning Rate alpha = 0.1 để cập nhập giá trị x trong 10 vòng lặp  
 
