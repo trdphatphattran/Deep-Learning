@@ -127,6 +127,50 @@ torch.tensor(arr) sao chép dữ liệu. Pytorch sẽ thực hiện copy dữ li
 arr ban đầu: [0, 1, 2, 3, 4] --> x: [0, 1, 2, 3, 4]  
 arr[0] = 99 --> x sẽ là: [0, 1, 2, 3, 4]  
 
+### Bài 5:  
+Tạo tensor với:  
+empty  
+zeros  
+ones  
+random  
+Reshape với view và view as  
+
+<img width="295" height="272" alt="image" src="https://github.com/user-attachments/assets/4433d025-5ca4-450f-bcf6-ab43cd332754" />  
+
+- Empty: tạo tensor chưa khởi tạo giá trị.
+- Zeros: tạo tensor toàn số 0.
+- Ones: tạo tensor toàn số 1.
+- Random: tạo tensor ngẫu nhiên từ 0 tới 1.
+
+<img width="265" height="227" alt="image" src="https://github.com/user-attachments/assets/a85e6699-e91d-44ac-9a4c-df1ad839f56c" />  
+
+Reshape với view:  
+<img width="380" height="180" alt="image" src="https://github.com/user-attachments/assets/91288a92-b332-41a4-8914-e0276c1f5b57" />  
+
+- Tạo tensor 4x4.
+- Thay đổi thành 2x8.
+- Dùng -1 để tự tính toán: ví dụ 1x16.
+
+<img width="355" height="65" alt="image" src="https://github.com/user-attachments/assets/2842f43b-ff89-4ae1-b8ce-696cc72a9e7b" />  
+
+Reshape với view as:  
+<img width="311" height="122" alt="image" src="https://github.com/user-attachments/assets/09e48233-3c9c-49ce-955b-0ae9599af5bd" />  
+
+- A: Tensor 1 chiều có 16 phần tử.  
+- B: Tensor 4x4.  
+- C: biến A có hình dạng giống biến B --> sẽ in ra torch.Size([4, 4]).
+
+<img width="264" height="25" alt="image" src="https://github.com/user-attachments/assets/62c35bbd-287c-489e-97d5-3a4f4326e2e9" />  
+
+
+
+
+
+
+
+
+
+
 
 
 
