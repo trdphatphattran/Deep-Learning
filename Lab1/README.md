@@ -67,13 +67,16 @@ Dùng phương pháp Gradient Descent với Learning Rate alpha = 0.1 để cậ
 - Pytorch tạo ra một Tensor x = 2.0.
 - Tại mỗi vòng lặp, Pytorch tính giá trị của y dựa trên x hiện tại.
 <img width="173" height="45" alt="image" src="https://github.com/user-attachments/assets/88b45f20-0c54-46f6-8758-b6d1991634b7" />
-- Tại lệnh này, nếu không xóa thì gradient của vòng lặp mới sẽ bị cộng dồn với gradient cũ. Lệnh .zero() giúp chúng xóa sạch dữ liệu cũ.
-- Tại lệnh y.backward(), pytorch thực hiện tính đạo hàm tại giá trị x hiện tại. Tại vòng lặp 1 (x = 2): y' = 3(2^2) + 4(2) + 5 = 25. Lưu giá trị 25 vào x.grad.
-- Cập nhật giá trị với câu lệnh sau:
-<img width="174" height="36" alt="image" src="https://github.com/user-attachments/assets/5b0052dc-b7f0-41c8-a75d-b359b926d21e" />
+
+- Tại lệnh này, nếu không xóa thì gradient của vòng lặp mới sẽ bị cộng dồn với gradient cũ. Lệnh .zero() giúp chúng xóa sạch dữ liệu cũ.  
+- Tại lệnh y.backward(), pytorch thực hiện tính đạo hàm tại giá trị x hiện tại. Tại vòng lặp 1 (x = 2): y' = 3(2^2) + 4(2) + 5 = 25. Lưu giá trị 25 vào x.grad.  
+- Cập nhật giá trị với câu lệnh sau:  
+<img width="174" height="36" alt="image" src="https://github.com/user-attachments/assets/5b0052dc-b7f0-41c8-a75d-b359b926d21e" />  
 
 Kết quả:  
 <img width="386" height="263" alt="image" src="https://github.com/user-attachments/assets/77fe11c6-81cc-4188-a025-3d37429c4fbc" />  
+
+
 
 
 
