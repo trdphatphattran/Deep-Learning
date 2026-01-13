@@ -39,6 +39,20 @@ $$
 
 Cho biết độ dốc của đa thức trên ở điểm nào?  
 
+<img width="522" height="203" alt="image" src="https://github.com/user-attachments/assets/78ab1a50-df8f-434f-9f33-350781c361c3" />  
+
+- Khi có requires_grad=True, Pytorch đính kèm một bộ lưu trữ dữ liệu đặc biệt. Nó bắt đầu xây dựng một Đồ thị tính toán.  
+- Với y.backward(): đây là lúc pytorch thực hiện chức năng chính. Nó đọc ngược từ y về x. Tại mỗi mắt xích, nó áp dụng công thức đạo hàm đã có trong thư viện.
+- Quy trình tính toán:
++ 5 x (5.1^4) = 25.
++ 6 x (3.1^2) = 18.
++ -3x = -3.
++ 1' = 0.
+Pytorch cộng dồn lại ra kết quả là 40.
+<img width="291" height="47" alt="image" src="https://github.com/user-attachments/assets/375c5885-0659-4dcc-b574-89c8b07892f8" />  
+
+
+
 
 
 
