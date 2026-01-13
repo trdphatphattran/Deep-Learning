@@ -33,7 +33,10 @@ Dòng lệnh y_train.reshape(-1, 1) sử dụng khả năng thay đổi hình d�
 
 ## Phần 2: Các bài tập với Pytorch  
 ### Bài 1: 
-Cho y = 5x^5 + 6x^3 - 3x + 1  
+$$
+y = 5x^5 + 6x^3 - 3x + 1
+$$
+
 Cho biết độ dốc của đa thức trên ở điểm nào?  
 
 
