@@ -166,7 +166,7 @@ Reshape với view as:
 1. Cài pytorch (dùng terminal hoặc cmd):  
 pip3 install torch torchvision torchaudio
 
-2. Import thư viện
+2. Import thư viện  
 import torch
 
 3. Thay đổi tham số
