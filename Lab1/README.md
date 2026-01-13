@@ -9,7 +9,7 @@ GVHD: Nguyễn Thái Anh
 Năm học: 2025 - 2026  
 
 ## Phần 1: Giới thiệu về Pytorch  
-### 1. Pytroch là gì?  
+### 1. Pytorch là gì?  
 PyTorch là một thư viện mã nguồn mở dùng để lập trình trí tuệ nhân tạo (AI), cụ thể là trong lĩnh vực Học sâu (Deep Learning). Nó được phát triển chủ yếu bởi phòng nghiên cứu AI của Meta (Facebook) và hiện là công cụ yêu thích nhất của các nhà khoa học dữ liệu trên toàn thế giới.  
 ### 2. Các chức năng chính của Pytorch  
 - Tính toán Tensor tối ưu (Thay thế NumPy trên GPU).
@@ -17,31 +17,23 @@ PyTorch là một thư viện mã nguồn mở dùng để lập trình trí tu�
 - Xây dựng Mạng thần kinh.
 - Tối ưu hóa mô hình.
 ### 3. Cách hoạt động của Pytorch  
-import torch  
-torch.cuda.is_available()  
-import torch  
-import numpy as np  
-import matplotlib.pyplot as plt  
-import pandas as pd  
+Giả sử ta có đoạn code sau  
+<img width="694" height="234" alt="image" src="https://github.com/user-attachments/assets/ed9b0018-b4ad-4c6f-bd07-27513278d132" />  
 
-df = pd.read_csv('Iris.csv')  
-df  
-df.shape  
-from sklearn.preprocessing import LabelEncoder  
-from sklearn.model_selection import train_test_split  
-le = LabelEncoder()  
-X = df.drop(['Species'], axis=1).values  
-y = le.fit_transform(df['Species'].values)  
+Pytorch làm các nhiệm vụ chính sau:  
+#### 1. Chuyển đổi kiểu dữ liệu  
+Chức năng quan trọng nhất là biến các mảng Numpy (X_train, y_train, ...) thành các Pytorch Tensors.  
+- torch.FloatTensor: chuyển các đặc trưng (features) như chiều dài, chiều rộng cánh hoa về kiểu số thực 32-bit.
+- torch.LongTensor: chuyển các nhãn (labels) như 0, 1, 2 (loài hoa) về kiểu số nguyên 64-bit.
 
-# Chia dữ liệu với test size = 20%  
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)  
-X_train = torch.FloatTensor(X_train)  
-X_test = torch.FloatTensor(X_test)  
-y_train = torch.LongTensor(y_train).reshape(-1, 1)  
-y_test = torch.LongTensor(y_test).reshape(-1, 1)  
-len(y_train)  
-labels, counts = y_train.unique(return_counts=True)  
-print(labels, counts)  
+#### 2. Quản lý cấu trúc dữ liệu  
+Dòng lệnh y_train.reshape(-1, 1) sử dụng khả năng thay đổi hình dạng của PyTorch:  
+- Nó biến một mảng phẳng thành một cột dọc.  
+- Việc này cực kỳ quan trọng để khi đưa vào mô hình, mỗi nhãn sẽ tương ứng chính xác với một hàng dữ liệu đặc trưng.  
+
+
+
+
 
 
 
