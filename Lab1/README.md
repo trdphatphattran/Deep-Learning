@@ -118,16 +118,16 @@ Kết quả:
 Hãy giải thích sự khác nhau của 2 trường hợp trên?  
 
 ##### Trường hợp 1  
-torch.from_numpy(arr) dùng chung bộ nhớ. Pytorch không tạo ra bản sao mới của dữ liệu mà nó tạo ra một tensor đưa thẳng vào bộ nhớ mà mảng Numpy đang sử dụng.  
+- torch.from_numpy(arr) dùng chung bộ nhớ. Pytorch không tạo ra bản sao mới của dữ liệu mà nó tạo ra một tensor đưa thẳng vào bộ nhớ mà mảng Numpy đang sử dụng.  
 
-arr ban đầu: [0, 1, 2, 3, 4] --> x: [0, 1, 2, 3, 4]  
-arr[0] = 99 --> x sẽ là: [99, 1, 2, 3, 4]  
++ arr ban đầu: [0, 1, 2, 3, 4] --> x: [0, 1, 2, 3, 4]  
++ arr[0] = 99 --> x sẽ là: [99, 1, 2, 3, 4]  
 
 ##### Trường hợp 2  
-torch.tensor(arr) sao chép dữ liệu. Pytorch sẽ thực hiện copy dữ liệu từ Numpy sang một vùng bộ nhớ mới hoàn toàn do Pytorch quản lý.  
+- torch.tensor(arr) sao chép dữ liệu. Pytorch sẽ thực hiện copy dữ liệu từ Numpy sang một vùng bộ nhớ mới hoàn toàn do Pytorch quản lý.  
 
-arr ban đầu: [0, 1, 2, 3, 4] --> x: [0, 1, 2, 3, 4]  
-arr[0] = 99 --> x sẽ là: [0, 1, 2, 3, 4]  
++ arr ban đầu: [0, 1, 2, 3, 4] --> x: [0, 1, 2, 3, 4]  
++ arr[0] = 99 --> x sẽ là: [0, 1, 2, 3, 4]  
 
 ### Bài 5:  
 Tạo tensor với:  
