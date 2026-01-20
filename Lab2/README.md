@@ -35,6 +35,16 @@ import numpy as np
 #### Lấy số 3 và số 5  
 <img width="201" height="76" alt="image" src="https://github.com/user-attachments/assets/59bc33f1-2c9f-4576-8001-916d099aac2e" />  
 
+#### Ví dụ cho một danh sách:  
+<img width="209" height="200" alt="image" src="https://github.com/user-attachments/assets/83d6ac54-ae14-4816-bcf2-b643210e5c71" />  
+
+#### Lấy số 2, 6, 10, 14  
+<img width="178" height="76" alt="image" src="https://github.com/user-attachments/assets/afdcd60e-fa6e-4255-8043-4e2ad600d5c0" />  
+
+
+
+
+
 
 
 
