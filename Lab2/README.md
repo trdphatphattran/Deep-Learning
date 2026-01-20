@@ -93,6 +93,30 @@ Phần sau dấu phẩy ([2, 0]): Lấy cột 2 và cột 0.
 Phần trước dấu phẩy ([2, 1, 0]): Lấy hàng 2, 1 và 0.  
 Phần sau dấu phẩy ([2, 2, 2]): Lấy toàn bộ cột thứ 2.  
 
+#### Bài 3:  
+<img width="355" height="77" alt="image" src="https://github.com/user-attachments/assets/6ff59cc9-8db0-45e7-8de5-cbc4d42dd698" />  
+
+- Cách làm:
+
+1. Tạo mảng từ 1 đến 10
+<img width="333" height="18" alt="image" src="https://github.com/user-attachments/assets/a5bb5318-120a-4850-b5ee-a1fde2294a99" />
+
+2. Xuất ra các giá trị chẵn dùng if (nếu các số trong mảng chia 2 bằng 0)
+<img width="203" height="58" alt="image" src="https://github.com/user-attachments/assets/e9d8ec01-31fe-40fe-a6e9-d32408415174" />
+
+3. Dùng list comprehension
+<img width="348" height="20" alt="image" src="https://github.com/user-attachments/assets/77ad09ae-1713-4ad7-8cc0-9292708eac21" />
+
+4. Kết quả
+<img width="487" height="24" alt="image" src="https://github.com/user-attachments/assets/480b18b2-f73c-4599-b2e6-48122b92ff15" />
+
+
+
+
+
+
+
+
 
 
 
