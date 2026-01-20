@@ -45,9 +45,28 @@ import numpy as np
 #### Bài 1:  
 <img width="464" height="436" alt="image" src="https://github.com/user-attachments/assets/25d48849-f3c6-40de-bf17-4d3cd3f5ea72" />  
 
-Cách làm:  
+- Cách làm:  
 1. Khởi tạo và in ra bàn cờ ban đầu
 <img width="206" height="94" alt="image" src="https://github.com/user-attachments/assets/c58835b8-e285-43c4-b4ac-21e460cbbdda" />
+
+2. Kiểm tra hàng ngang, hàng dọc, đường chéo
+<img width="346" height="236" alt="image" src="https://github.com/user-attachments/assets/1dbe2a27-844e-46d4-8183-7181e6b94551" />
+
+3. In ra bàn cờ và điền vị trí vào
+<img width="362" height="199" alt="image" src="https://github.com/user-attachments/assets/ffc55980-e74c-46eb-b38b-91733fb5b892" />
+
+4. Điền các giá trị vào bàn cờ và kiểm tra thắng thua
+<img width="309" height="126" alt="image" src="https://github.com/user-attachments/assets/a24022f4-ad79-414f-8881-7534bb47ad0a" />
+
+- Ví dụ kết quả:
+<img width="106" height="549" alt="image" src="https://github.com/user-attachments/assets/32d346f9-84f6-4eb8-879d-886d512f6eaa" />
+
+
+
+
+
+
+
 
 
 
