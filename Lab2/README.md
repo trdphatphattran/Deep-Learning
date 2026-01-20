@@ -64,11 +64,19 @@ import numpy as np
 #### Bài 2:  
 <img width="126" height="256" alt="image" src="https://github.com/user-attachments/assets/0d2e1067-6a01-44e2-944f-83b2eeed559e" />  
 
-y = np.array([
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-])
+- Cách làm:
+
+Tạo ma trận:  
+<img width="172" height="233" alt="image" src="https://github.com/user-attachments/assets/c5748d40-6307-4ad9-b1d4-41beeb742748" />  
+
+1. Lấy 4, 5, 6
+<img width="127" height="76" alt="image" src="https://github.com/user-attachments/assets/62def90d-23df-475e-8339-2f407653f556" />
+
+Phần trước dấu phẩy (1): Lấy hàng thứ 2.  Phần sau dấu phẩy (;): Lấy tất cả giá trị thuộc hàng 2.  
+
+
+
+
 
 
 
