@@ -130,6 +130,21 @@ Phần sau dấu phẩy ([2, 2, 2]): Lấy toàn bộ cột thứ 2.
 5. Kết quả
 <img width="193" height="261" alt="image" src="https://github.com/user-attachments/assets/96883495-84db-49ba-b6da-2da70391501d" />
 
+## Phần 3: Cách sử dụng  
+1. Cài pytorch (dùng terminal hoặc cmd):  
+pip3 install numpy  
+
+2. Import thư viện  
+import numpy as np  
+
+3. Thay đổi tham số
+- Ở mỗi bài tập, ví dụ có thể thay đổi hàm, tham số, ... khác nhau để xem kết quả.
+
+## Phần 4: Tài liệu tham khảo  
+1. Tài liệu lý thuyết + thực hành Van Lang University.
+2. NumPy Documentation (https://numpy.org/doc/).
+3. Tài liệu hướng dẫn của W3Schools (https://www.w3schools.com/python/numpy/default.asp).  
+
 
 
 
