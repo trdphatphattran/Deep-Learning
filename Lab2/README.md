@@ -81,6 +81,24 @@ Phần sau dấu phẩy (;): Lấy tất cả giá trị thuộc hàng 2.
 Phần trước dấu phẩy ([0 ,1]): Lấy hàng 0 và hàng 1.  
 Phần sau dấu phẩy (1): Lấy giá trị tại cột 1 của hàng 0 và hàng 1.  
 
+3. Lấy 3, 4
+<img width="183" height="78" alt="image" src="https://github.com/user-attachments/assets/279d0009-637d-4876-b06a-7fac08152a49" />
+
+Phần trước dấu phẩy ([0, 1]): Lấy hàng 0 và hàng 1.  
+Phần sau dấu phẩy ([2, 0]): Lấy cột 2 và cột 0.  
+
+4. Lấy 9, 6, 3
+<img width="223" height="71" alt="image" src="https://github.com/user-attachments/assets/34972cdb-d2e1-4138-a4e5-17e4f378a066" />
+
+Phần trước dấu phẩy ([2, 1, 0]): Lấy hàng 2, 1 và 0.  
+Phần sau dấu phẩy ([2, 2, 2]): Lấy toàn bộ cột thứ 2.  
+
+
+
+
+
+
+
 
 
 
