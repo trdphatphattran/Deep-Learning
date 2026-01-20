@@ -41,6 +41,18 @@ import numpy as np
 #### Lấy số 2, 6, 10, 14  
 <img width="178" height="76" alt="image" src="https://github.com/user-attachments/assets/afdcd60e-fa6e-4255-8043-4e2ad600d5c0" />  
 
+### 4. Một số bài tập về Numpy  
+#### Bài 1:  
+<img width="464" height="436" alt="image" src="https://github.com/user-attachments/assets/25d48849-f3c6-40de-bf17-4d3cd3f5ea72" />  
+
+Cách làm:  
+1. Khởi tạo và in ra bàn cờ ban đầu
+<img width="206" height="94" alt="image" src="https://github.com/user-attachments/assets/c58835b8-e285-43c4-b4ac-21e460cbbdda" />
+
+
+
+
+
 
 
 
