@@ -7,3 +7,14 @@ Trường Đại học Văn Lang
 Môn học: Giới thiệu về học sâu  
 GVHD: Nguyễn Thái Anh  
 Năm học: 2025 - 2026  
+
+## Phần 1: Giới thiệu về Numpy  
+### 1. Numpy là gì?  
+NumPy (viết tắt của Numerical Python) là thư viện lõi và quan trọng nhất cho việc tính toán khoa học trong ngôn ngữ lập trình Python.  
+
+### 2. Các tính năng của Numpy?  
+NumPy không chỉ là nơi chứa dữ liệu mà còn cung cấp một hệ sinh thái các công cụ toán học:  
+- Broadcasting: Cơ chế mạnh mẽ cho phép thực hiện các phép toán giữa các mảng có kích thước khác nhau mà không cần viết vòng lặp thủ công.  
+- Toán học & Đại số tuyến tính: Cung cấp sẵn các hàm tính sin, cos, log, căn bậc hai, nhân ma trận, tìm định thức, nghịch đảo ma trận...  
+- Số ngẫu nhiên (Random): Khả năng tạo ra các bộ số ngẫu nhiên theo nhiều phân phối khác nhau (Gaussian, Uniform, v.v.).  
+- Biến đổi Fourier (FFT): Hỗ trợ đắc lực trong xử lý tín hiệu.  
