@@ -72,7 +72,17 @@ Tạo ma trận:
 1. Lấy 4, 5, 6
 <img width="127" height="76" alt="image" src="https://github.com/user-attachments/assets/62def90d-23df-475e-8339-2f407653f556" />
 
-Phần trước dấu phẩy (1): Lấy hàng thứ 2.  Phần sau dấu phẩy (;): Lấy tất cả giá trị thuộc hàng 2.  
+Phần trước dấu phẩy (1): Lấy hàng thứ 2.  
+Phần sau dấu phẩy (;): Lấy tất cả giá trị thuộc hàng 2.  
+
+2. Lấy 2, 5  
+<img width="144" height="72" alt="image" src="https://github.com/user-attachments/assets/2018ee21-43ab-4b22-a797-0e7fc2f734f6" />  
+
+Phần trước dấu phẩy ([0 ,1]): Lấy hàng 0 và hàng 1.  
+Phần sau dấu phẩy (1): Lấy giá trị tại cột 1 của hàng 0 và hàng 1.  
+
+
+
 
 
 
