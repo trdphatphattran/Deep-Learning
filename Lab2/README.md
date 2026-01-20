@@ -67,7 +67,7 @@ import numpy as np
 ### Bài tập truy xuất Ma trận với NumPy
 
 Cho ma trận $y$ như sau:
-```python
+```
 y = np.array([
     [1, 2, 3],
     [4, 5, 6],
