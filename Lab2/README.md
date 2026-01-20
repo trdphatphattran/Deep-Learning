@@ -17,4 +17,8 @@ NumPy không chỉ là nơi chứa dữ liệu mà còn cung cấp một hệ si
 - Broadcasting: Cơ chế mạnh mẽ cho phép thực hiện các phép toán giữa các mảng có kích thước khác nhau mà không cần viết vòng lặp thủ công.  
 - Toán học & Đại số tuyến tính: Cung cấp sẵn các hàm tính sin, cos, log, căn bậc hai, nhân ma trận, tìm định thức, nghịch đảo ma trận...  
 - Số ngẫu nhiên (Random): Khả năng tạo ra các bộ số ngẫu nhiên theo nhiều phân phối khác nhau (Gaussian, Uniform, v.v.).  
-- Biến đổi Fourier (FFT): Hỗ trợ đắc lực trong xử lý tín hiệu.  
+- Biến đổi Fourier (FFT): Hỗ trợ đắc lực trong xử lý tín hiệu.
+
+### 3. Một số ví dụ với Numpy  
+#### Trước hết, để sử dụng cần tải thư viện:  
+pip install numpy
