@@ -61,6 +61,20 @@ import numpy as np
 - Ví dụ kết quả:
 <img width="106" height="549" alt="image" src="https://github.com/user-attachments/assets/32d346f9-84f6-4eb8-879d-886d512f6eaa" />
 
+#### Bài 2:  
+<img width="126" height="256" alt="image" src="https://github.com/user-attachments/assets/0d2e1067-6a01-44e2-944f-83b2eeed559e" />  
+
+### Bài tập truy xuất Ma trận với NumPy
+
+Cho ma trận $y$ như sau:
+```python
+y = np.array([
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+])
+
+
 
 
 
