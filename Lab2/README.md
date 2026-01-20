@@ -29,6 +29,17 @@ import numpy as np
 #### Ví dụ tạo một mảng với Numpy:  
 <img width="284" height="25" alt="image" src="https://github.com/user-attachments/assets/5047e4d9-071f-41c9-9aa3-44b621d6fd80" />  
 
+#### Lấy từ số 3 đến số 8  
+<img width="194" height="91" alt="image" src="https://github.com/user-attachments/assets/7ac7cafc-030b-4604-98f2-d12799756487" />  
+
+#### Lấy số 3 và số 5  
+<img width="201" height="76" alt="image" src="https://github.com/user-attachments/assets/59bc33f1-2c9f-4576-8001-916d099aac2e" />  
+
+
+
+
+
+
 
 
 
