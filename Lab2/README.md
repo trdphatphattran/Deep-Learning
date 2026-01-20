@@ -21,4 +21,14 @@ NumPy không chỉ là nơi chứa dữ liệu mà còn cung cấp một hệ si
 
 ### 3. Một số ví dụ với Numpy  
 #### Trước hết, để sử dụng cần tải thư viện:  
-pip install numpy
+pip install numpy  
+
+#### Import thư viện trước khi sử dụng:  
+import numpy as np  
+
+#### Ví dụ tạo một mảng với Numpy:  
+<img width="284" height="25" alt="image" src="https://github.com/user-attachments/assets/5047e4d9-071f-41c9-9aa3-44b621d6fd80" />  
+
+
+
+
