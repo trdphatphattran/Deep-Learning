@@ -41,7 +41,7 @@ import numpy as np
 #### Lấy số 2, 6, 10, 14  
 <img width="178" height="76" alt="image" src="https://github.com/user-attachments/assets/afdcd60e-fa6e-4255-8043-4e2ad600d5c0" />  
 
-### 4. Một số bài tập về Numpy  
+## Phần 2. Một số bài tập về Numpy  
 #### Bài 1:  
 <img width="464" height="436" alt="image" src="https://github.com/user-attachments/assets/25d48849-f3c6-40de-bf17-4d3cd3f5ea72" />  
 
@@ -109,6 +109,32 @@ Phần sau dấu phẩy ([2, 2, 2]): Lấy toàn bộ cột thứ 2.
 
 4. Kết quả
 <img width="487" height="24" alt="image" src="https://github.com/user-attachments/assets/480b18b2-f73c-4599-b2e6-48122b92ff15" />
+
+#### Bài 4:  
+<img width="1048" height="121" alt="image" src="https://github.com/user-attachments/assets/12861bfd-6aa3-4ebc-966e-732ac04fe917" />  
+
+- Cách làm:
+
+1. Tạo dữ liệu 150 x 5
+<img width="216" height="38" alt="image" src="https://github.com/user-attachments/assets/e78779ba-0403-48e4-993e-cfdeb65b888c" />
+
+2. Tách x và y
+<img width="202" height="39" alt="image" src="https://github.com/user-attachments/assets/a838309a-fda2-4482-a231-e4e8df429887" />
+
+3. Chia tập train (70%) và test (30%)
+<img width="319" height="242" alt="image" src="https://github.com/user-attachments/assets/4a6854b2-29cc-4058-b329-315dad77467c" />
+
+4. Tạo 10 tập x_train không chồng chéo nhau
+<img width="327" height="21" alt="image" src="https://github.com/user-attachments/assets/c1758933-f55f-4783-a255-057f32983db0" />
+
+5. Kết quả
+<img width="193" height="261" alt="image" src="https://github.com/user-attachments/assets/96883495-84db-49ba-b6da-2da70391501d" />
+
+
+
+
+
+
 
 
 
