@@ -30,16 +30,15 @@ Năm học: 2025 - 2026
 - Indexing:
 <img width="130" height="249" alt="image" src="https://github.com/user-attachments/assets/ad437685-0f6b-4b42-acd4-3778ed2b6cdd" />
 
-- Letter indexing:
-<img width="570" height="264" alt="image" src="https://github.com/user-attachments/assets/d23f4bb3-13eb-4910-8a53-84e95ed962e2" />
+... Ngoài ra, có thể xem thêm các ví dụ trong file code đính kèm.  
 
-- Combined indexing:
-<img width="366" height="194" alt="image" src="https://github.com/user-attachments/assets/925aa043-a8f5-428c-9bbb-fbc0788ae2f7" />
+## Phần 3: Một số bài tập với Pandas  
+```python
+print("Hello, world!")
 
-- Pandas and dictionary:
+for i in range(5):
+    print(i)
 
-Hệ thống chỉ mục của Pandas có cấu trúc tương tự dictionary.  
-Việc tạo một đối tượng Pandas từ dictionary là điều hoàn toàn dễ hiểu.  
 
 
 
