@@ -39,6 +39,8 @@ numpy_arr = np.arange(5)
 data_pd = pd.Series(numpy_arr)
 data_pd
 data_pd[-1]
+```
+
 
 
 
