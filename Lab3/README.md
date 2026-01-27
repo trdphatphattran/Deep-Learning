@@ -34,10 +34,11 @@ Năm học: 2025 - 2026
 
 ## Phần 3: Một số bài tập với Pandas  
 ```python
-print("Hello, world!")
-
-for i in range(5):
-    print(i)
+import numpy as np
+numpy_arr = np.arange(5)
+data_pd = pd.Series(numpy_arr)
+data_pd
+data_pd[-1]
 
 
 
