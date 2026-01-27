@@ -49,6 +49,19 @@ data_pd = pd.Series([1.25, 2.0, 0.75, 1.0], index = ['a', 'b', 'c', 'd'])
 data_pd[-1]
 ```
 --> Kết quả: 1.0  
+#### Giải thích:  
+Ở ví dụ 1: Series với index là số nguyên:  
+- Khi tạo một series mà không chỉ định index thì pandas sẽ mặc định tạo ra các số nguyên (0, 1, 2, 3, 4).
+- Khi index là các số nguyên, pandas sẽ ưu tiên hiểu các con số trong [] là Label-based indexing.
+- Pandas sẽ tìm kiếm label có tên là -1. Vì trong các số nguyên không có số -1 nên nó sẽ báo lỗi.
+
+Ở ví dụ 2: Series với index là kí tự  
+- Khi index của series không phải là số nguyên ('a', 'b', 'c', 'd'), pandas sẽ linh hoạt hơn.
+- Nếu label không phải là số, pandas sẽ hiểu sử dụng position-based indexing.
+- Trong các số, -1 là đại diện cho số cuối, nên nó trả về kết quả là 1.
+
+
+  
 
 
 
