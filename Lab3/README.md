@@ -60,6 +60,24 @@ data_pd[-1]
 - Nếu label không phải là số, pandas sẽ hiểu sử dụng position-based indexing.
 - Trong các số, -1 là đại diện cho số cuối, nên nó trả về kết quả là 1.
 
+## Phần 4: Cách sử dụng  
+1. Cài pytorch (dùng terminal hoặc cmd):  
+pip3 install numpy
+pip3 install pandas  
+
+3. Import thư viện  
+import numpy as np
+import pandas as pd
+
+4. Thay đổi tham số
+- Ở mỗi bài tập, ví dụ có thể thay đổi hàm, tham số, ... khác nhau để xem kết quả.
+
+## Phần 5: Tài liệu tham khảo  
+1. Tài liệu lý thuyết + thực hành Van Lang University.
+2. NumPy Documentation (https://numpy.org/doc/).
+3. Pandas Documentation (https://pandas.pydata.org/docs/).  
+4. Tài liệu hướng dẫn của W3Schools (https://www.w3schools.com/python/numpy/default.asp). 
+
 
   
 
