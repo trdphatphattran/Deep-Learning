@@ -33,6 +33,7 @@ Năm học: 2025 - 2026
 ... Ngoài ra, có thể xem thêm các ví dụ trong file code đính kèm.  
 
 ## Phần 3: Một số bài tập với Pandas  
+### Bài 1: Cho 2 ví dụ sau và giải thích sự khác nhau
 ```python
 import numpy as np
 numpy_arr = np.arange(5)
@@ -40,6 +41,14 @@ data_pd = pd.Series(numpy_arr)
 data_pd
 data_pd[-1]
 ```
+--> Kết quả ra lỗi  
+```python
+data_pd = pd.Series([1.25, 2.0, 0.75, 1.0], index = ['a', 'b', 'c', 'd'])
+data_pd[-1]
+```
+--> Kết quả: 1.0  
+
+
 
 
 
