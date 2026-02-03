@@ -60,8 +60,8 @@ data_pd[-1]
 - Nếu label không phải là số, pandas sẽ hiểu sử dụng position-based indexing.
 - Trong các số, -1 là đại diện cho số cuối, nên nó trả về kết quả là 1.
 
-Tải file howlongwelive.csv và thực hiện các yêu cầu bên dưới:  
 ### Bài 1:  
+Tải file howlongwelive.csv và thực hiện các yêu cầu bên dưới:  
 #### 1. In ra 2 dòng đầu và 2 dòng cuối của DataFrame  
 
 
