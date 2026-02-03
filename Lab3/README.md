@@ -116,21 +116,47 @@ Tải file howlongwelive.csv và thực hiện các yêu cầu bên dưới:
 --> Kết quả:  
 <img width="57" height="26" alt="image" src="https://github.com/user-attachments/assets/2dd8c69b-45ba-4bef-bc61-e30a32dc2654" />  
 
+### Bài 2:  
+#### 1. Kiểm tra xem mỗi cột có bao nhiêu giá trị bị thiếu (missing data/ NaN)  
+- Chúng ta sử dụng isnull() để xác định ô trống và sum() để cộng tất cả cột.
+<img width="178" height="19" alt="image" src="https://github.com/user-attachments/assets/146b9806-1969-4aa3-87ae-3c4f40dce286" />
 
+--> Kết quả:  
+<img width="288" height="393" alt="image" src="https://github.com/user-attachments/assets/2a5dc61b-6fb1-4771-ac99-e5ae8f39a8dc" />  
 
+#### 2. Xử lý tất cả dữ liệu thiếu bằng cách thay thế bằng giá trị trung bình (mean) của từng cột tương ứng  
+- Chúng ta sử dụng mean để tính giá trị trung bình của từng cột tương ứng.
+<img width="310" height="23" alt="image" src="https://github.com/user-attachments/assets/ff559d35-d6d6-48e0-b1fa-94e1eed6ed70" />
 
+#### 3. Thực hiện groupby theo quốc gia (Country): Quốc gia nào có tuổi thọ trung bình thấp nhất? Quốc gia nào có tuổi thọ trung bình cao nhất?  
+- Chúng ta sử dụng groupby theo Country và tìm giá trị min/max của cột Life expectancy.
+<img width="431" height="77" alt="image" src="https://github.com/user-attachments/assets/2dea1d0d-57ec-46f6-bdbe-b50fa0c1d162" />
 
+--> Kết quả:  
+<img width="205" height="45" alt="image" src="https://github.com/user-attachments/assets/e0bfbf4a-092d-41fa-9051-b33229607ffc" />  
 
+#### 4. Thực hiện groupby theo Status (Developed / Developing). Có sự khác biệt rõ rệt nào về tuổi thọ trung bình giữa các quốc gia phát triển và đang phát triển hay không?  
+- Vẫn tiếp tục sử dụng groupby nhưng theo Status.
+<img width="413" height="20" alt="image" src="https://github.com/user-attachments/assets/1a996636-40af-465b-a56a-e315f19d6688" />
 
+--> Kết quả:  
+<img width="295" height="81" alt="image" src="https://github.com/user-attachments/assets/a9d189e9-b408-463c-800f-9d5be2a00e49" />  
 
+- Các quốc gia developed (1) có độ tuổi trung bình cao hơn so với developing (0).
 
+#### 5. Tạo một DataFrame mới bằng tay gồm 2 cột: Cột thứ nhất là ID, có giá trị giống với cột Country, Cột thứ hai là Noise_level, điền giá trị ngẫu nhiên (tùy ý)  
+- Chúng ta dùng unique để lấy danh sách các quốc gia duy nhất và random để tạo giá trị ngẫu nhiên.
+<img width="361" height="110" alt="image" src="https://github.com/user-attachments/assets/088e28d7-8dda-41a3-b058-4332a828707b" />
 
+--> Kết quả:  
+<img width="400" height="265" alt="image" src="https://github.com/user-attachments/assets/72f57a42-b97c-4916-8e4c-1a7313a16f54" />  
 
+#### 6. Gộp (merge) hai DataFrame lại với nhau dựa trên cột ID.  
+- Dùng merge để thực hiện việc gộp 2 dataframe lại với nhau, đó là df và df_noise.
+<img width="321" height="61" alt="image" src="https://github.com/user-attachments/assets/c6a0d30b-c715-48e3-a9c7-72d3afe722a6" />
 
-
-
-
-
+--> Kết quả:  
+<img width="333" height="256" alt="image" src="https://github.com/user-attachments/assets/e95c5940-e506-4908-a11b-13642a6d2007" />  
 
 ## Phần 4: Cách sử dụng  
 1. Cài pytorch (dùng terminal hoặc cmd):  
