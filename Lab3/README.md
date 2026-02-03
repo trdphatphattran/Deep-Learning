@@ -63,6 +63,73 @@ data_pd[-1]
 ### Bài 1:  
 Tải file howlongwelive.csv và thực hiện các yêu cầu bên dưới:  
 #### 1. In ra 2 dòng đầu và 2 dòng cuối của DataFrame  
+- Chúng ta sử dụng head() để in ra các dòng đầu và tail() để in ra các dòng cuối.
+<img width="128" height="37" alt="image" src="https://github.com/user-attachments/assets/4af80aec-de75-4b79-96c1-1523a2f6cbed" />
+
+--> Kết quả:  
+<img width="597" height="531" alt="image" src="https://github.com/user-attachments/assets/15f29e74-c235-4e80-9167-7bc765abda98" />  
+
+#### 2. In ra kích thước (shape) của DataFrame  
+- Chúng ta sử dụng shape để in ra kích thước.
+<img width="114" height="23" alt="image" src="https://github.com/user-attachments/assets/ac08732f-8ce5-4df3-af9e-3218d85cc8b4" />
+
+--> Kết quả:  
+<img width="80" height="24" alt="image" src="https://github.com/user-attachments/assets/51743d52-ed16-44b2-ba32-9332d098fb4b" />  
+
+#### 3. In ra tên các đặc trưng (các cột) của DataFrame.  
+- Chúng ta sử dụng columns để in ra các cột đặc trưng.
+<img width="131" height="21" alt="image" src="https://github.com/user-attachments/assets/6f514e25-4fee-45fd-b9cd-48828ad8dcbd" />
+
+--> Kết quả:  
+<img width="580" height="134" alt="image" src="https://github.com/user-attachments/assets/d10fabb1-4ac4-42ff-864c-01c072a65c95" />  
+
+#### 4. In ra bảng thống kê mô tả bằng hàm .describe().  
+- Chúng ta sử dụng describe() để in ra bảng thống kê mô tả.
+<img width="151" height="22" alt="image" src="https://github.com/user-attachments/assets/4c669b03-ec56-4cdc-9692-709e1de36fbf" />
+
+--> Kết quả:  
+<img width="560" height="549" alt="image" src="https://github.com/user-attachments/assets/294d4048-f6c9-487c-9832-67a8017ab80a" />  
+
+#### 5. Vì cột Hepatitis B có rất nhiều giá trị thiếu (NaN) và có mức tương quan cao với Diphtheria, hãy xóa cột Hepatitis B. Đồng thời xóa cột Population do có quá nhiều giá trị NaN.  
+- Chúng ta sử dụng drop để xóa các cột không cần thiết.
+<img width="375" height="20" alt="image" src="https://github.com/user-attachments/assets/cbf8987f-caa6-46b0-bbcd-a5a5fa75a470" />
+
+#### 6. Chuyển đổi cột Status sang dạng số 0 cho Developing và 1 cho Developed  
+- Chúng ta sử dụng replace để thay đổi định dạng.
+<img width="523" height="23" alt="image" src="https://github.com/user-attachments/assets/ce63a353-c851-4047-9283-6cc04e439cbd" />
+
+#### 7. Đổi tên cột thinness 1-19 years thành thinness 10-19 years.  
+- Chúng ta sử dụng rename để thay đổi tên cột.
+<img width="520" height="19" alt="image" src="https://github.com/user-attachments/assets/66105a03-5206-4882-a4f2-4db475a14d96" />
+
+#### 8. Lấy tất cả các cột ngoại trừ Life Expectancy, chuyển sang mảng NumPy và lưu vào biến X.  
+- Chúng ta sử dụng drop để loại bỏ cột Life Expectancy đi và dùng values để chuyển sang mảng numpy.  
+<img width="358" height="20" alt="image" src="https://github.com/user-attachments/assets/7e69bc75-3fe9-4ab5-acca-8d008ab10b9c" />
+
+--> Kết quả:  
+<img width="82" height="29" alt="image" src="https://github.com/user-attachments/assets/f16f6d9d-7518-4071-be0b-62a53436157b" />  
+
+#### 9. Lấy cột Life Expectancy, chuyển sang mảng NumPy và lưu vào biến y.  
+- Chúng ta lấy cột Life expectancy và dùng values để chuyển sang mảng numpy.
+<img width="246" height="18" alt="image" src="https://github.com/user-attachments/assets/803bd552-1bf5-4baf-9973-783bf53a6499" />
+
+--> Kết quả:  
+<img width="57" height="26" alt="image" src="https://github.com/user-attachments/assets/2dd8c69b-45ba-4bef-bc61-e30a32dc2654" />  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 ## Phần 4: Cách sử dụng  
