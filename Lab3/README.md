@@ -33,7 +33,7 @@ Năm học: 2025 - 2026
 ... Ngoài ra, có thể xem thêm các ví dụ trong file code đính kèm.  
 
 ## Phần 3: Một số bài tập với Pandas  
-### Bài 1: Cho 2 ví dụ sau và giải thích sự khác nhau  
+### Cho 2 ví dụ sau và giải thích sự khác nhau  
 #### Ví dụ 1:  
 ```python
 import numpy as np
@@ -59,6 +59,11 @@ data_pd[-1]
 - Khi index của series không phải là số nguyên ('a', 'b', 'c', 'd'), pandas sẽ linh hoạt hơn.
 - Nếu label không phải là số, pandas sẽ hiểu sử dụng position-based indexing.
 - Trong các số, -1 là đại diện cho số cuối, nên nó trả về kết quả là 1.
+
+Tải file howlongwelive.csv và thực hiện các yêu cầu bên dưới:  
+### Bài 1:  
+#### 1. In ra 2 dòng đầu và 2 dòng cuối của DataFrame  
+
 
 ## Phần 4: Cách sử dụng  
 1. Cài pytorch (dùng terminal hoặc cmd):  
