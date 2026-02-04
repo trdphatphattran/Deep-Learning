@@ -22,14 +22,15 @@ Năm học: 2025 - 2026
     - Có thể thay đổi số nút tùy vào bài toán chứ không nhất thiết phải là 4 nút.
     - Ví dụ: Họ nhìn (1, 2) và tính xem nó gần gốc tọa độ hay xa.
   - Lớp đầu ra: Nhóm đưa ra kết quả cuối, chỉ cần 1 người (1 nút) nói "lớp 0" hay "lớp 1".
-    - Ví dụ: Kết quả 0.7 nghĩa là nghiêng về lớp 1.
+    - Ví dụ: Kết quả 0.7 nghĩa là nghiêng về lớp 1.  
    
-- Hình ảnh minh họa:
-  - Sơ đồ:
-    - Bên trái: 2 vòng tròn (đầu vào x và y).
-    - Giữa: 4 vòng tròn nối với 2 vòng tròn trước bằng mũi tên (lớp ẩn).
-    - Bên phải: 1 vòng tròn nối với 4 vòng tròn giữa (đầu ra).
-  - Mỗi mũi tên là "trọng số" - độ quan trọng của thông tin.
-  - Hình minh họa:
-![image.png](attachment:image.png)
+- Hình ảnh minh họa:  
+  - Sơ đồ:  
+    - Bên trái: 2 vòng tròn (đầu vào x và y).  
+    - Giữa: 4 vòng tròn nối với 2 vòng tròn trước bằng mũi tên (lớp ẩn).  
+    - Bên phải: 1 vòng tròn nối với 4 vòng tròn giữa (đầu ra).  
+  - Mỗi mũi tên là "trọng số" - độ quan trọng của thông tin.  
+  - Hình minh họa:  
+<img width="658" height="446" alt="image" src="https://github.com/user-attachments/assets/81bfb306-fb8b-4680-9d84-cd7815f7f7b7" />
+
   
