@@ -157,7 +157,7 @@ import pandas as pd
 3. Thay đổi tham số
 - Ở mỗi bài tập, ví dụ có thể thay đổi hàm, tham số, ... khác nhau để xem kết quả.
 
-## Phần 5: Tài liệu tham khảo  
+## Phần 4: Tài liệu tham khảo  
 1. Tài liệu lý thuyết + thực hành Van Lang University.
 2. NumPy Documentation (https://numpy.org/doc/).
 3. Pandas Documentation (https://pandas.pydata.org/docs/).  
