@@ -100,11 +100,23 @@ Cách làm:
    - Thay `optim.Adam` bằng `optim.SGD` với `lr=0.01`.  
    - Huấn luyện lại (100 epochs).  
    - Ghi lại mất mát cuối cùng và độ chính xác.
+  
+Cách làm:  
+- Thay optim.Adam thành optim.SGD với learning rate = 0.01:
+<img width="368" height="39" alt="image" src="https://github.com/user-attachments/assets/0b4b1093-ef9e-4f10-9065-68f400c5720e" />
+
+- Huấn luyện với 100 epochs:
+<img width="510" height="183" alt="image" src="https://github.com/user-attachments/assets/53af417d-ffd1-45b4-af3f-cf38776c9270" />
+
+--> Kết quả:  
+<img width="223" height="109" alt="image" src="https://github.com/user-attachments/assets/1de9966f-971e-45b4-ae0e-8531c47b95d1" />  
 
 3. **Câu hỏi**:  
    - So sánh kết quả:  
      - `BCEWithLogitsLoss` có khác gì so với `BCELoss` về mất mát và độ chính xác? Tại sao?  
-     - `SGD` so với `Adam`: Mất mát giảm nhanh hơn hay chậm hơn? Độ chính xác thay đổi ra sao?  
+     - `SGD` so với `Adam`: Mất mát giảm nhanh hơn hay chậm hơn? Độ chính xác thay đổi ra sao?
+<img width="1365" height="172" alt="image" src="https://github.com/user-attachments/assets/a60194b4-cf45-4001-b822-5df8d7e332dc" />  
+
 
 
 
