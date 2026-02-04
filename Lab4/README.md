@@ -58,10 +58,26 @@ Cách làm:
      - Đầu ra: 1 nút (Sigmoid).  
    - Huấn luyện lại mô hình (100 epochs).  
    - Ghi lại giá trị mất mát cuối cùng và độ chính xác.
+  
+Cách làm:  
+- Thêm vào một lớp ẩn:
+<img width="275" height="329" alt="image" src="https://github.com/user-attachments/assets/6c72d69f-c3f6-4b48-89da-79e9a964967a" />
+
+- Huấn luyện mô hình ở 100 epochs:
+<img width="507" height="182" alt="image" src="https://github.com/user-attachments/assets/92a99a4d-3284-43e2-9c4b-b81d4043a454" />
+
+--> Kết quả:  
+<img width="221" height="111" alt="image" src="https://github.com/user-attachments/assets/7ec84e64-7e39-44f6-a821-89e80f213056" />  
 
 3. **Câu hỏi**:  
    - So sánh kết quả của 3 mô hình (4 nút, 8 nút, 8+6 nút):  
-     - Mất mát cuối cùng thay đổi thế nào?  
+     - Mất mát cuối cùng thay đổi thế nào?
+       - Mất mát loss có xu hướng giảm sâu và nhanh hơn:  
+        - Từ 4 lên 8 nút: Khả năng khớp với dữ liệu tăng lên đáng kể vì mô hình có nhiều trọng số hơn để điều chỉnh.  
+        - Thêm 6 lớp nút: Việc thêm độ sâu giúp mô hình học được các tổ hợp đặc trưng phức tạp hơn. Loss thường sẽ thấp nhất ở mô hình này sau 100 epochs.  
      - Độ chính xác có cải thiện không? Tại sao bạn nghĩ vậy?  
+       - 4 nút: Có thể đạt độ chính xác cơ bản khoảng 80%. Với quá ít nút ẩn, thì mô hình có thể bị underfitting.  
+        - 8 nút: Độ chính xác được tăng lên. Việc gấp đôi nút ẩn cho thấy mô hình tạo ra độ chính xác cao hơn trong không gian đặc trưng, giúp phân loại chính xác hơn các điểm dữ liệu.  
+        - 8 + 6 nút: Độ chính xác cao nhất, khi thêm lớp ẩn thứ hai thì mô hình không chỉ đếm các đặc trưng mà còn được học sự kết hợp giữa các đặc trưng đó. Điều này giúp xử lý những outliers tốt hơn.  
 
   
