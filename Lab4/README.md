@@ -71,13 +71,12 @@ Cách làm:
 
 3. **Câu hỏi**:  
    - So sánh kết quả của 3 mô hình (4 nút, 8 nút, 8+6 nút):  
-     - Mất mát cuối cùng thay đổi thế nào?
-       - Mất mát loss có xu hướng giảm sâu và nhanh hơn:  
-        - Từ 4 lên 8 nút: Khả năng khớp với dữ liệu tăng lên đáng kể vì mô hình có nhiều trọng số hơn để điều chỉnh.  
-        - Thêm 6 lớp nút: Việc thêm độ sâu giúp mô hình học được các tổ hợp đặc trưng phức tạp hơn. Loss thường sẽ thấp nhất ở mô hình này sau 100 epochs.  
-     - Độ chính xác có cải thiện không? Tại sao bạn nghĩ vậy?  
-       - 4 nút: Có thể đạt độ chính xác cơ bản khoảng 80%. Với quá ít nút ẩn, thì mô hình có thể bị underfitting.  
-        - 8 nút: Độ chính xác được tăng lên. Việc gấp đôi nút ẩn cho thấy mô hình tạo ra độ chính xác cao hơn trong không gian đặc trưng, giúp phân loại chính xác hơn các điểm dữ liệu.  
-        - 8 + 6 nút: Độ chính xác cao nhất, khi thêm lớp ẩn thứ hai thì mô hình không chỉ đếm các đặc trưng mà còn được học sự kết hợp giữa các đặc trưng đó. Điều này giúp xử lý những outliers tốt hơn.  
+     - Mất mát cuối cùng thay đổi thế nào?  
+     - Độ chính xác có cải thiện không? Tại sao bạn nghĩ vậy?
+<img width="1340" height="171" alt="image" src="https://github.com/user-attachments/assets/0be7f02f-0dff-4bf2-8fd2-0f25f21731f4" />
+
+
+
+
 
   
