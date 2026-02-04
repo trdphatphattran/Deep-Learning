@@ -81,6 +81,19 @@ Cách làm:
    - Xóa hàm Sigmoid khỏi lớp đầu ra của mô hình (vì `BCEWithLogitsLoss` tự xử lý).  
    - Huấn luyện lại mô hình với cấu trúc ban đầu (2-4-1, 100 epochs).  
    - Ghi lại mất mát cuối cùng và độ chính xác.
+  
+Cách làm:  
+- Thay đổi nn.BCELoss() thành nn.BCEWithLogitLoss():
+<img width="373" height="41" alt="image" src="https://github.com/user-attachments/assets/6c022ace-0aa2-4180-90c0-ee0d313b307f" />
+
+- Xóa hàm sigmoid khỏi lớp đầu vào:
+<img width="278" height="216" alt="image" src="https://github.com/user-attachments/assets/be465cf4-fb26-4271-8e63-9c5cda6fa21b" />
+
+- Huấn luyện theo cấu trúc ban đầu:
+<img width="508" height="188" alt="image" src="https://github.com/user-attachments/assets/6cd8de4f-c660-441f-96b9-50d6c3088471" />
+
+--> Kết quả:  
+<img width="224" height="119" alt="image" src="https://github.com/user-attachments/assets/8da27249-8603-4b26-bf68-b2127b050796" />  
 
 2. **Thay Adam bằng SGD**:  
    - Dùng lại cấu trúc ban đầu (2-4-1) với `nn.BCELoss()`.  
