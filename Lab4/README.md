@@ -38,7 +38,17 @@ Năm học: 2025 - 2026
 1. **Tăng số nút trong lớp ẩn**:  
    - Sửa lớp ẩn từ 4 nút thành 8 nút trong code định nghĩa `ANN`.  
    - Huấn luyện lại mô hình với cùng dữ liệu `X_train`, `y_train` từ lab (100 epochs).  
-   - Ghi lại giá trị mất mát cuối cùng (`loss`) và độ chính xác trên tập kiểm tra (`X_test`, `y_test`).  
+   - Ghi lại giá trị mất mát cuối cùng (`loss`) và độ chính xác trên tập kiểm tra (`X_test`, `y_test`).
+
+Cách làm:  
+- Tăng trọng số trong lớp ẩn:  
+<img width="274" height="256" alt="image" src="https://github.com/user-attachments/assets/a685e6c1-013b-4bee-a137-251d3eb2e3ef" />
+
+- Huấn luyện mô hình ở 100 epochs:
+<img width="510" height="184" alt="image" src="https://github.com/user-attachments/assets/bedfda01-4093-45d6-9271-4341be8b9ebc" />
+
+--> Kết quả:  
+<img width="223" height="119" alt="image" src="https://github.com/user-attachments/assets/96b6550d-2489-4670-8b3c-385e8a981bd4" />  
 
 2. **Thêm một lớp ẩn**:  
    - Thêm một lớp ẩn thứ hai với 6 nút, dùng ReLU làm hàm kích hoạt. Cấu trúc mới:  
