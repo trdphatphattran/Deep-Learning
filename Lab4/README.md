@@ -115,7 +115,54 @@ Cách làm:
    - So sánh kết quả:  
      - `BCEWithLogitsLoss` có khác gì so với `BCELoss` về mất mát và độ chính xác? Tại sao?  
      - `SGD` so với `Adam`: Mất mát giảm nhanh hơn hay chậm hơn? Độ chính xác thay đổi ra sao?
-<img width="1365" height="172" alt="image" src="https://github.com/user-attachments/assets/a60194b4-cf45-4001-b822-5df8d7e332dc" />  
+<img width="1365" height="172" alt="image" src="https://github.com/user-attachments/assets/a60194b4-cf45-4001-b822-5df8d7e332dc" />
+
+### Bài 3:  
+1. **Vẽ đồ thị mất mát**:  
+   - Sửa code huấn luyện để lưu giá trị mất mát (`loss`) sau mỗi epoch vào một danh sách.  
+   - Vẽ đồ thị mất mát theo epoch cho 3 trường hợp:  
+     - Cấu trúc ban đầu (2-4-1, Adam, BCELoss).  
+     - Cấu trúc 2-8-1 (Adam, BCELoss).  
+     - Cấu trúc 2-4-1 (SGD, BCELoss).  
+   - Dùng `matplotlib` để vẽ 3 đường trên cùng một đồ thị, thêm chú thích (`legend`).
+
+Cách làm:  
+- Vẽ đồ thị 2-4-1, Adam, BCELoss:
+<img width="919" height="41" alt="image" src="https://github.com/user-attachments/assets/dd052ef9-c587-4acc-8e4e-8f75ec4430db" />
+
+- Vẽ đồ thị 2-8-1, Adam, BCELoss:
+<img width="920" height="39" alt="image" src="https://github.com/user-attachments/assets/35abf103-1de6-46d9-b347-472788c20b7e" />
+
+- Vẽ đồ thị 2-4-1, SGD, BCELoss:
+<img width="887" height="40" alt="image" src="https://github.com/user-attachments/assets/f1a07bb2-5a58-47f5-8f67-541d35fa88ce" />
+
+- Dùng matplotlib để vẽ đồ thị, kết quả:
+<img width="858" height="549" alt="image" src="https://github.com/user-attachments/assets/9c40babd-aede-4557-b13e-d5c3202be3fd" />  
+
+2. **Câu hỏi**:  
+   - Quan sát đồ thị:  
+     - Mất mát giảm nhanh nhất ở trường hợp nào? Chậm nhất ở đâu?  
+     - Có trường hợp nào mất mát không giảm đều không (dao động)? Giải thích tại sao.
+<img width="1397" height="104" alt="image" src="https://github.com/user-attachments/assets/d078f3b8-8be3-477a-acf2-a2dfec4bde43" />
+
+## Phần 3: Cách sử dụng  
+1. Cài pytorch (dùng terminal hoặc cmd):  
+pip3 install numpy
+pip3 install pandas  
+
+2. Import thư viện  
+import numpy as np
+import pandas as pd
+
+3. Thay đổi tham số
+- Ở mỗi bài tập, ví dụ có thể thay đổi hàm, tham số, ... khác nhau để xem kết quả.
+
+## Phần 5: Tài liệu tham khảo  
+1. Tài liệu lý thuyết + thực hành Van Lang University.
+2. NumPy Documentation (https://numpy.org/doc/).
+3. Pandas Documentation (https://pandas.pydata.org/docs/).  
+4. Tài liệu hướng dẫn của W3Schools (https://www.w3schools.com/python/numpy/default.asp). 
+
 
 
 
