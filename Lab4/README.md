@@ -75,6 +75,24 @@ Cách làm:
      - Độ chính xác có cải thiện không? Tại sao bạn nghĩ vậy?
 <img width="1340" height="171" alt="image" src="https://github.com/user-attachments/assets/0be7f02f-0dff-4bf2-8fd2-0f25f21731f4" />
 
+### Bài 2:  
+1. **Dùng BCEWithLogitsLoss thay cho BCELoss**:  
+   - Thay `nn.BCELoss()` bằng `nn.BCEWithLogitsLoss()`.  
+   - Xóa hàm Sigmoid khỏi lớp đầu ra của mô hình (vì `BCEWithLogitsLoss` tự xử lý).  
+   - Huấn luyện lại mô hình với cấu trúc ban đầu (2-4-1, 100 epochs).  
+   - Ghi lại mất mát cuối cùng và độ chính xác.
+
+2. **Thay Adam bằng SGD**:  
+   - Dùng lại cấu trúc ban đầu (2-4-1) với `nn.BCELoss()`.  
+   - Thay `optim.Adam` bằng `optim.SGD` với `lr=0.01`.  
+   - Huấn luyện lại (100 epochs).  
+   - Ghi lại mất mát cuối cùng và độ chính xác.
+
+3. **Câu hỏi**:  
+   - So sánh kết quả:  
+     - `BCEWithLogitsLoss` có khác gì so với `BCELoss` về mất mát và độ chính xác? Tại sao?  
+     - `SGD` so với `Adam`: Mất mát giảm nhanh hơn hay chậm hơn? Độ chính xác thay đổi ra sao?  
+
 
 
 
