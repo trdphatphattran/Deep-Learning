@@ -33,4 +33,25 @@ Năm học: 2025 - 2026
   - Hình minh họa:  
 <img width="658" height="446" alt="image" src="https://github.com/user-attachments/assets/81bfb306-fb8b-4680-9d84-cd7815f7f7b7" />
 
+## Phần 2: Bài tập với ANN  
+### Bài 1:  
+1. **Tăng số nút trong lớp ẩn**:  
+   - Sửa lớp ẩn từ 4 nút thành 8 nút trong code định nghĩa `ANN`.  
+   - Huấn luyện lại mô hình với cùng dữ liệu `X_train`, `y_train` từ lab (100 epochs).  
+   - Ghi lại giá trị mất mát cuối cùng (`loss`) và độ chính xác trên tập kiểm tra (`X_test`, `y_test`).  
+
+2. **Thêm một lớp ẩn**:  
+   - Thêm một lớp ẩn thứ hai với 6 nút, dùng ReLU làm hàm kích hoạt. Cấu trúc mới:  
+     - Đầu vào: 2 nút.  
+     - Lớp ẩn 1: 8 nút (ReLU).  
+     - Lớp ẩn 2: 6 nút (ReLU).  
+     - Đầu ra: 1 nút (Sigmoid).  
+   - Huấn luyện lại mô hình (100 epochs).  
+   - Ghi lại giá trị mất mát cuối cùng và độ chính xác.
+
+3. **Câu hỏi**:  
+   - So sánh kết quả của 3 mô hình (4 nút, 8 nút, 8+6 nút):  
+     - Mất mát cuối cùng thay đổi thế nào?  
+     - Độ chính xác có cải thiện không? Tại sao bạn nghĩ vậy?  
+
   
