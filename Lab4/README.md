@@ -145,6 +145,10 @@ Cách làm:
      - Có trường hợp nào mất mát không giảm đều không (dao động)? Giải thích tại sao.
 <img width="1397" height="104" alt="image" src="https://github.com/user-attachments/assets/d078f3b8-8be3-477a-acf2-a2dfec4bde43" />
 
+### Bài tập tết  
+1. **Câu hỏi**:
+   - Huấn luyện ANN trên tập data MNIST  
+
 ## Phần 3: Cách sử dụng  
 1. Cài pytorch (dùng terminal hoặc cmd):  
 pip3 install numpy
