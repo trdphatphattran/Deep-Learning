@@ -147,7 +147,30 @@ Cách làm:
 
 ### Bài tập tết  
 1. **Câu hỏi**:
-   - Huấn luyện ANN trên tập data MNIST  
+   - Huấn luyện ANN trên tập data MNIST.
+
+Cách làm:  
+- Load dữ liệu tập MNIST
+<img width="654" height="52" alt="image" src="https://github.com/user-attachments/assets/5be497dc-6a72-4ec9-9f2c-780b418e5f94" />
+
+- Tạo DataLoader tải dữ liệu dạng batch
+<img width="565" height="40" alt="image" src="https://github.com/user-attachments/assets/74043b49-b0ec-4787-9f7b-0af6fe29d4d9" />
+
+- Khởi tạo mô hình ANN
+<img width="311" height="293" alt="image" src="https://github.com/user-attachments/assets/7bbd951d-3e24-416b-a7b5-036e3e7ed3f5" />
+
+- Huấn luyện mô hình trên 10 epochs
+<img width="637" height="739" alt="image" src="https://github.com/user-attachments/assets/f14c4f47-2bc6-4d81-90f4-34c2860b86ca" />
+
+- Vẽ biểu đồ chính xác và mất mát
+<img width="473" height="290" alt="image" src="https://github.com/user-attachments/assets/0275d013-5df0-4af8-91ab-1ad2b255c72e" />
+
+
+
+
+
+
+
 
 ## Phần 3: Cách sử dụng  
 1. Cài pytorch (dùng terminal hoặc cmd):  
