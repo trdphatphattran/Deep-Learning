@@ -165,12 +165,27 @@ Cách làm:
 - Vẽ biểu đồ chính xác và mất mát
 <img width="473" height="290" alt="image" src="https://github.com/user-attachments/assets/0275d013-5df0-4af8-91ab-1ad2b255c72e" />
 
+2. **Câu hỏi**:
+   - Huấn luyện ANN trên tập data dogs-vs-cats.
+  
+Cách làm:  
+- Load tập data gồm các hình ảnh
+<img width="371" height="542" alt="image" src="https://github.com/user-attachments/assets/b21581e3-ef63-4769-905c-ca40ccd11960" />
 
+- Chia dữ liệu
+<img width="390" height="58" alt="image" src="https://github.com/user-attachments/assets/4409fa02-4f37-48a7-8cf1-0c4afb13500d" />
 
+- Chuyển sang tensor pytorch
+<img width="367" height="99" alt="image" src="https://github.com/user-attachments/assets/f4ed5101-f126-4142-8c64-b775484a8dd6" />
 
+- Khởi tạo mô hình ANN
+<img width="418" height="380" alt="image" src="https://github.com/user-attachments/assets/4036ae7d-420f-4077-b183-49632865abfe" />
 
+- Huấn luyện mô hình với 100 epochs
+<img width="635" height="401" alt="image" src="https://github.com/user-attachments/assets/0e2e28e5-6077-463f-82ab-daf93b9af638" />
 
-
+- Vẽ biểu đồ mất mát và chính xác
+<img width="240" height="274" alt="image" src="https://github.com/user-attachments/assets/2ad8b63e-7744-4867-82ce-16467aadd2cb" />  
 
 ## Phần 3: Cách sử dụng  
 1. Cài pytorch (dùng terminal hoặc cmd):  
