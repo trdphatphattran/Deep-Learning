@@ -133,6 +133,13 @@ optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
 ```
 <img width="1171" height="477" alt="image" src="https://github.com/user-attachments/assets/e31f60f0-78d2-4fea-975f-10a8240e0daf" />  
 
+- Biểu đồ mất mát ở lr = 0.001 có sự giảm mạnh từ epoch 1 đến epoch 2, sau đó nó giảm đều từ từ đến epoch 10.  
+- Biểu đồ mất mát ở lr = 0.1 có sự dao động nhẹ ở một vài epoch, nhưng nhìn chung biểu đồ có xu hướng giảm.  
+- Learning rate quyết định mức độ thay đổi của trọng số sau mỗi lần cập nhật trong quá trình huấn luyện mô hình. Nếu learning rate quá nhỏ, mô hình học rất chậm; nếu quá lớn, quá trình học có thể dao động và không hội tụ. Vì vậy, chọn learning rate phù hợp giúp mô hình hội tụ nhanh và đạt độ chính xác tốt hơn.
+
+
+
+
 
 
 
