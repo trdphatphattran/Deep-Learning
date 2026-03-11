@@ -80,5 +80,39 @@ for epoch in range(10):
 
 <img width="1169" height="478" alt="image" src="https://github.com/user-attachments/assets/42c59f96-bf04-44e4-9a02-a92250c68fe9" />  
 
+### Bài 2:  
+- **Yêu cầu**: Thêm một tầng tích chập thứ ba (`conv3`) vào mô hình `MNIST_CNN`.  
+- **Hướng dẫn**:  
+  - Trong hàm `__init__`, thêm `self.conv3 = nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=0)` (32 kênh đầu vào từ `conv2`, 64 kênh đầu ra).  
+  - Trong hàm `forward`, thêm `x = self.pool(torch.relu(self.conv3(x)))` sau dòng `x = self.pool(torch.relu(self.conv2(x)))`.  
+  - Kích thước sau `conv3` và pooling sẽ là 64x1x1 (vì 5x5 -> 3x3 -> 1x1 sau hai lần pooling và tích chập). Sửa tầng `fc1` thành `self.fc1 = nn.Linear(64 * 1 * 1, 10)` và dòng `x.view(-1, 64 * 1 * 1)` tương ứng.  
+  - Chạy lại code và ghi nhận độ chính xác mới trên tập test.  
+- Viết ngắn gọn về tác dụng của việc thêm tầng tích chập (ví dụ: tìm đặc trưng phức tạp hơn, ảnh hưởng đến độ chính xác).
+
+Cách làm:  
+```python
+class MNIST_CNN(nn.Module):  
+    def __init__(self):  
+        super(MNIST_CNN, self).__init__() 
+        self.conv1 = nn.Conv2d(1, 16, kernel_size=3, stride=1, padding=0)  
+        self.conv2 = nn.Conv2d(16, 32, kernel_size=3, stride=1, padding=0)  
+        self.conv3 = nn.Conv2d(32, 64, kernel_size=3, stride=1, padding=0)  
+        self.pool = nn.MaxPool2d(kernel_size=2, stride=2)  
+        self.fc1 = nn.Linear(64 * 1 * 1, 10)  
+
+    def forward(self, x): 
+        x = self.pool(torch.relu(self.conv1(x))) 
+        x = self.pool(torch.relu(self.conv2(x)))  
+        x = self.pool(torch.relu(self.conv3(x)))
+        x = x.view(-1, 64 * 1 * 1)  
+        x = self.fc1(x)
+
+        return x
+```
+- Việc thêm một tầng tích chập giúp mô hình học được các đặc trưng phức tạp hơn của hình ảnh. Các tầng tích chập sâu hơn có khả năng trích xuất những đặc điểm chi tiết hơn, từ đó có thể cải thiện độ chính xác của mô hình trên tập kiểm tra.
+
+<img width="1169" height="478" alt="image" src="https://github.com/user-attachments/assets/b5b5683c-c127-4f98-a6ea-9ff6c6a5e697" />  
+
+
 
 
