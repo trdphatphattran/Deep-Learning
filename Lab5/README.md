@@ -61,3 +61,11 @@ CNN dùng trong nhiều lĩnh vực:
 - Nhận diện khuôn mặt: Facebook dùng CNN để gắn thẻ bạn bè trong ảnh.
 - Xe tự lái: Phát hiện biển báo, người đi bộ qua camera.
 - Y khoa: Phân tích ảnh X-quang để tìm bệnh.
+
+## Bài tập với CNN  
+### Bài 1:  
+- **Yêu cầu**: Tăng số lượng epoch từ 5 lên 10 trong phần huấn luyện mô hình.  
+- **Hướng dẫn**: Tìm dòng `for epoch in range(5):` và sửa thành `for epoch in range(10):`. Chạy lại code và ghi nhận:  
+  - Độ chính xác trên tập test có thay đổi không? Nếu có, tăng hay giảm?  
+  - Biểu đồ mất mát (loss) thay đổi thế nào qua 10 epoch? Có xu hướng nào đáng chú ý không (ví dụ: giảm đều, chững lại)?  
+-  Giải thích về lý do tại sao số epoch ảnh hưởng đến kết quả.  
