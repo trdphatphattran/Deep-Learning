@@ -137,6 +137,65 @@ optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)
 - Biểu đồ mất mát ở lr = 0.1 có sự dao động nhẹ ở một vài epoch, nhưng nhìn chung biểu đồ có xu hướng giảm.  
 - Learning rate quyết định mức độ thay đổi của trọng số sau mỗi lần cập nhật trong quá trình huấn luyện mô hình. Nếu learning rate quá nhỏ, mô hình học rất chậm; nếu quá lớn, quá trình học có thể dao động và không hội tụ. Vì vậy, chọn learning rate phù hợp giúp mô hình hội tụ nhanh và đạt độ chính xác tốt hơn.
 
+### Bài 4  
+- **Yêu cầu**: Sửa hàm `visualize_feature_map` để vẽ thêm hai feature map từ tầng `conv2`.  
+- **Hướng dẫn**:  
+  - Trong hàm `visualize_feature_map`, thêm dòng `conv2_output = torch.relu(self.conv2(self.pool(torch.relu(self.conv1(img)))))` để tính feature map từ `conv2`.  
+  - Tăng khung hình từ 3 cột thành 5 cột: `plt.figure(figsize=(20, 4))` và sửa các subplot thành `plt.subplot(1, 5, ...)`.  
+  - Thêm hai subplot để vẽ `conv2_output[0, 0]` và `conv2_output[0, 1]` (tương tự như `conv1_output`).  
+  - Chạy lại và mô tả sự khác biệt giữa feature map từ `conv1` và `conv2` (ví dụ: chi tiết hơn, trừu tượng hơn).  
+- Viết ngắn gọn về sự khác biệt giữa feature map từ các tầng khác nhau.
+
+Cách làm:  
+```python
+def visualize_feature_map(): 
+    model.eval()  
+    images, _ = next(iter(test_loader)) 
+    img = images[0].unsqueeze(0).to(device)  
+
+    conv1_output = torch.relu(model.conv1(img)) 
+    conv2_output = torch.relu(model.conv2(model.pool(torch.relu(model.conv1(img)))))
+    plt.figure(figsize=(20, 4))  
+    plt.subplot(1, 5, 1)  
+    plt.title("Ảnh gốc")  
+    plt.imshow(img.cpu().squeeze(), cmap='gray') 
+    plt.axis('off')  
+    
+    plt.subplot(1, 5, 2)  
+    plt.title("Feature Map 1")  
+    plt.imshow(conv1_output[0, 0].cpu().detach().numpy(), cmap='gray')  
+    plt.axis('off')  
+    
+    plt.subplot(1, 5, 3)  
+    plt.title("Feature Map 2") 
+    plt.imshow(conv1_output[0, 1].cpu().detach().numpy(), cmap='gray')  
+    plt.axis('off') 
+    
+    plt.subplot(1, 5, 4)  
+    plt.title("Feature Map 3") 
+    plt.imshow(conv2_output[0, 0].cpu().detach().numpy(), cmap='gray')  
+    plt.axis('off') 
+    
+    plt.subplot(1, 5, 5)  
+    plt.title("Feature Map 4") 
+    plt.imshow(conv2_output[0, 1].cpu().detach().numpy(), cmap='gray')  
+    plt.axis('off') 
+    plt.show() 
+
+visualize_feature_map()  
+```
+
+<img width="1168" height="480" alt="image" src="https://github.com/user-attachments/assets/8940f593-3b53-47ec-bdc9-d1ed069928d8" />  
+
+<img width="1171" height="512" alt="image" src="https://github.com/user-attachments/assets/2acfc71f-e549-49be-a298-1a78ccca788a" />  
+
+- Conv1: hiển thị rõ viền và nét của số 7 gồm đường chéo và đường ngang rõ ràng, độ cong và mép nét đều được giữ lại. Feature map vẫn giữ nhiều chi tiết không gian của ảnh gốc.  
+- Conv2: hiển thị các vùng chính của số 7 bao gồm vùng đầu số 7 được nhấn mạnh, các vùng còn lại mờ hơn. Ảnh trở nên thô hơn, tập trung vào hình dạng tổng quát.
+
+
+
+
+
 
 
 
