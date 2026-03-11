@@ -113,6 +113,31 @@ class MNIST_CNN(nn.Module):
 
 <img width="1169" height="478" alt="image" src="https://github.com/user-attachments/assets/b5b5683c-c127-4f98-a6ea-9ff6c6a5e697" />  
 
+### Bài 3:  
+- **Yêu cầu**: Thử hai giá trị learning rate khác nhau: 0.001 và 0.1 (thay vì 0.01 ban đầu).  
+- **Hướng dẫn**: Tìm dòng `optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9)` và thay `lr=0.001` rồi `lr=0.1`. Chạy lại code với từng giá trị và ghi nhận:  
+  - Độ chính xác trên tập test với mỗi learning rate.  
+  - Biểu đồ mất mát thay đổi ra sao? (Ví dụ: dao động mạnh, giảm chậm, hoặc không hội tụ).  
+- Cách learning rate ảnh hưởng đến quá trình học của mô hình như thế nào?
+
+Cách làm:  
+- Với lr = 0.001:
+```python
+optimizer = optim.SGD(model.parameters(), lr=0.001, momentum=0.9)  
+```
+<img width="1169" height="477" alt="image" src="https://github.com/user-attachments/assets/b94d37d3-9747-4db9-a795-bb7cfd650a23" />  
+
+- Với lr = 0.01:
+```python
+optimizer = optim.SGD(model.parameters(), lr=0.1, momentum=0.9)  
+```
+<img width="1171" height="477" alt="image" src="https://github.com/user-attachments/assets/e31f60f0-78d2-4fea-975f-10a8240e0daf" />  
+
+
+
+
+
+
 
 
 
