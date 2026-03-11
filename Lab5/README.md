@@ -74,3 +74,11 @@ Cách làm:
 ```python
 for epoch in range(10):
 ```
+- Độ chính xác trên tập test tăng khi thay đổi số lượng epoch từ 5 lên 10.  
+- Biểu đồ mất mát loss giảm mạnh từ epoch 1 đến epoch 2, sau đó nó giảm đều tới epoch 10.  
+- Số epoch ảnh hưởng đến kết quả vì số epoch cho biết mô hình sẽ học nhiều hay là học ít. Khi mô hình học ít, nó chưa thể học đầy đủ các đặc trưng của bộ data, dẫn đến kết quả chính xác không cao. Ngược lại, khi epoch tăng, mô hình học được nhiều hơn, nắm được nhiều đặc trưng hơn dẫn đến kết quả chính xác tăng lên đáng kể.
+
+<img width="1169" height="478" alt="image" src="https://github.com/user-attachments/assets/42c59f96-bf04-44e4-9a02-a92250c68fe9" />  
+
+
+
