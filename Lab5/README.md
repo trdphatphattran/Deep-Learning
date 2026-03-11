@@ -68,4 +68,9 @@ CNN dùng trong nhiều lĩnh vực:
 - **Hướng dẫn**: Tìm dòng `for epoch in range(5):` và sửa thành `for epoch in range(10):`. Chạy lại code và ghi nhận:  
   - Độ chính xác trên tập test có thay đổi không? Nếu có, tăng hay giảm?  
   - Biểu đồ mất mát (loss) thay đổi thế nào qua 10 epoch? Có xu hướng nào đáng chú ý không (ví dụ: giảm đều, chững lại)?  
--  Giải thích về lý do tại sao số epoch ảnh hưởng đến kết quả.  
+-  Giải thích về lý do tại sao số epoch ảnh hưởng đến kết quả.
+
+Cách làm:  
+```python
+for epoch in range(10):
+```
