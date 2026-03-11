@@ -2,7 +2,7 @@
 ## Thông tin:  
 Sinh viên: Trần Đại Phát  
 MSSV: 2374802010379  
-Môn học: Giới thiệu về học sâu
+Môn học: Giới thiệu về học sâu  
 GVHD: Nguyễn Thái Anh  
 Năm học: 2025 - 2026    
 ## 1. CNN là gì?  
