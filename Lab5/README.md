@@ -194,6 +194,277 @@ visualize_feature_map()
 - Conv2: hiển thị các vùng chính của số 7 bao gồm vùng đầu số 7 được nhấn mạnh, các vùng còn lại mờ hơn. Ảnh trở nên thô hơn, tập trung vào hình dạng tổng quát.
 
 ## CIFAR-10  
+- Khai báo thư viện, load bộ data CIFAR-10 với 10 classes: 'plane', 'car', 'bird', 'cat', 'deer', 'dog', 'frog', 'horse', 'ship', 'truck'.
+- Thực hiện bước tiền xử lý dữ liệu với transform.Compose():
+```python
+transform_train = transforms.Compose([
+    transforms.RandomCrop(32, padding=4), # cắt ngẫu nhiên một vùng 32x32
+    transforms.RandomHorizontalFlip(), # lật ngược ảnh theo chiều ngang
+    transforms.RandomRotation(15), # xoay ảnh một góc 15 độ
+    transforms.ToTensor(), # chuyển đổi ảnh sang tensor 
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010)) # chuẩn hóa dữ liệu
+])
+
+transform_test = transforms.Compose([
+    transforms.ToTensor(),
+    transforms.Normalize((0.4914, 0.4822, 0.4465), (0.2023, 0.1994, 0.2010))
+])
+```
+
+- Khởi tạo class CIFAR-10 với 6 tầng convolution và 3 tầng fully connected.
+```python
+class CIFAR10_AdvancedCNN(nn.Module):
+    def __init__(self):
+        super(CIFAR10_AdvancedCNN, self).__init__()
+        self.block1 = nn.Sequential(
+            nn.Conv2d(3, 64, 3, padding=1), # tầng đặc trưng 1
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.Conv2d(64, 64, 3, padding=1), # tầng đặc trưng 2
+            nn.BatchNorm2d(64),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)
+        )
+        self.block2 = nn.Sequential(
+            nn.Conv2d(64, 128, 3, padding=1), # tầng đặc trưng 3
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.Conv2d(128, 128, 3, padding=1), # tầng đặc trưng 4
+            nn.BatchNorm2d(128),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)
+        )
+        self.block3 = nn.Sequential(
+            nn.Conv2d(128, 256, 3, padding=1), # tầng đặc trưng 5
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+            nn.Conv2d(256, 256, 3, padding=1), # tầng đặc trưng 6
+            nn.BatchNorm2d(256),
+            nn.ReLU(),
+            nn.MaxPool2d(2, 2)
+        )
+        
+        self.dropout = nn.Dropout(0.5)
+        self.fc = nn.Sequential(
+            nn.Linear(256 * 4 * 4, 1024), # tầng phân loại 1
+            nn.ReLU(),
+            nn.Dropout(0.5),
+            nn.Linear(1024, 512), # tầng phân loại 2
+            nn.ReLU(),
+            nn.Linear(512, 10) # tầng phân loại 3
+        )
+
+    def forward(self, x):
+        x = self.block1(x)
+        x = self.block2(x)
+        x = self.block3(x)
+        x = x.view(x.size(0), -1)
+        x = self.fc(x)
+        return x
+```
+- Khởi tạo mô hình CNN
+```python
+model = CIFAR10_AdvancedCNN().to(device)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.SGD(model.parameters(), lr=0.01, momentum=0.9, weight_decay=5e-4)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', patience=5, factor=0.5)
+```
+- Huấn luyện mô hình với 100 epochs:
+```python
+for epoch in range(100):
+    model.train()
+    ......
+```
+- Vẽ biểu đồ sau khi huấn luyện:
+<img width="614" height="268" alt="image" src="https://github.com/user-attachments/assets/78d7f213-eb0c-432d-b9a3-8f4703c6f32a" />
+
+- In ra độ chính xác trên tập test:
+```python
+model.eval()
+correct, total = 0, 0
+with torch.no_grad():
+    for images, labels in test_loader:
+        images, labels = images.to(device), labels.to(device)
+        outputs = model(images)
+        _, predicted = torch.max(outputs.data, 1)
+        total += labels.size(0)
+        correct += (predicted == labels).sum().item()
+
+print(f"\n Độ chính xác trên tập test: {100 * correct / total:.2f}%")
+```
+<img width="270" height="30" alt="image" src="https://github.com/user-attachments/assets/3b87bfb3-31ea-4558-aed4-ed482a1113c9" />  
+
+- Thực hiện test thử với bộ dữ liệu test:
+<img width="1490" height="335" alt="image" src="https://github.com/user-attachments/assets/e1b78166-5a31-401b-9b0a-9f75d9179064" />
+
+## Cat and Dog  
+- Khai báo thư viện, định nghĩa cách đọc ảnh với hàm CatDogCustomDataset(), sử dụng các phép tiền xử lý dữ liệu với transform.Compose():
+```python
+transform_train = transforms.Compose([
+    transforms.Resize((128, 128)), 
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(20),
+    transforms.ColorJitter(brightness=0.2, contrast=0.2, saturation=0.2), 
+    transforms.ToTensor(),
+    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+])
+
+transform_test = transforms.Compose([
+    transforms.Resize((128, 128)),
+    transforms.ToTensor(),
+    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+])
+```
+- Khởi tạo class CatDog với 4 tầng 
+```python
+class CatDog_CNN_Advanced(nn.Module):
+    def __init__(self):
+        super(CatDog_CNN_Advanced, self).__init__()
+        self.conv1 = nn.Conv2d(3, 32, kernel_size=3, padding=1)
+        self.bn1 = nn.BatchNorm2d(32)
+        self.relu1 = nn.ReLU()
+        self.pool1 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv2 = nn.Conv2d(32, 64, kernel_size=3, padding=1)
+        self.bn2 = nn.BatchNorm2d(64)
+        self.relu2 = nn.ReLU()
+        self.pool2 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv3 = nn.Conv2d(64, 128, kernel_size=3, padding=1)
+        self.bn3 = nn.BatchNorm2d(128)
+        self.relu3 = nn.ReLU()
+        self.pool3 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.conv4 = nn.Conv2d(128, 256, kernel_size=3, padding=1)
+        self.bn4 = nn.BatchNorm2d(256)
+        self.relu4 = nn.ReLU()
+        self.pool4 = nn.MaxPool2d(kernel_size=2, stride=2)
+        self.dropout = nn.Dropout(0.5)
+        self.fc1 = nn.Linear(256 * 8 * 8, 512)
+        self.fc2 = nn.Linear(512, 2)
+
+    def forward(self, x):
+        x = self.conv1(x)
+        x = self.bn1(x)
+        x = self.relu1(x)
+        x = self.pool1(x)
+        x = self.conv2(x)
+        x = self.bn2(x)
+        x = self.relu2(x)
+        x = self.pool2(x)
+        x = self.conv3(x)
+        x = self.bn3(x)
+        x = self.relu3(x)
+        x = self.pool3(x)
+        x = self.conv4(x)
+        x = self.bn4(x)
+        x = self.relu4(x)
+        x = self.pool4(x)
+        x = x.view(x.size(0), -1) 
+        x = self.fc1(x)
+        x = torch.relu(x)
+        x = self.dropout(x)
+        x = self.fc2(x)
+        
+        return x
+```
+- Khởi tạo mô hình CNN:
+```python
+model = CatDog_CNN_Advanced().to(device)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=1e-2) 
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, mode='max', patience=5, factor=0.5)
+```
+- Huấn luyện mô hình với 50 epochs:
+```python
+for epoch in range(50):
+    model.train()
+    ........
+```
+- Vẽ biểu đồ sau huấn luyện:
+<img width="614" height="202" alt="image" src="https://github.com/user-attachments/assets/9424b9fb-3d81-40d0-9632-01083b4a5011" />
+
+- In ra độ chính xác trên tập test:
+<img width="261" height="27" alt="image" src="https://github.com/user-attachments/assets/a22e13b7-ece6-47a9-b085-fd38452705ee" />
+
+- Thử test với bộ dữ liệu test:
+<img width="615" height="155" alt="image" src="https://github.com/user-attachments/assets/8bed81f7-0e86-4b6c-b138-08101ba91846" />
+
+## PlantVillage  
+- Khai báo thư viện, thực hiện các bước tiền xử lý ảnh với transform.Compose():
+```python
+transform = transforms.Compose([
+    transforms.Resize((128, 128)),
+    transforms.RandomHorizontalFlip(),
+    transforms.RandomRotation(15),
+    transforms.ToTensor(),
+    transforms.Normalize((0.485, 0.456, 0.406), (0.229, 0.224, 0.225))
+])
+```
+- Khởi tạo class:
+```python
+class PlantDiseaseCNN(nn.Module):
+    def __init__(self, num_classes):
+        super(PlantDiseaseCNN, self).__init__()
+        def conv_layer(in_f, out_f):
+            return nn.Sequential(
+                nn.Conv2d(in_f, out_f, kernel_size=3, padding=1),
+                nn.BatchNorm2d(out_f),
+                nn.ReLU(),
+                nn.MaxPool2d(2, 2)
+            )
+        self.features = nn.Sequential(
+            conv_layer(3, 32),   
+            conv_layer(32, 64),  
+            conv_layer(64, 128), 
+            conv_layer(128, 256) 
+        )
+        self.classifier = nn.Sequential(
+            nn.Dropout(0.5),
+            nn.Linear(256 * 8 * 8, 512),
+            nn.ReLU(),
+            nn.Linear(512, num_classes)
+        )
+    def forward(self, x):
+        x = self.features(x)
+        x = x.view(x.size(0), -1)
+        return self.classifier(x)
+```
+- Khởi tạo mô hình CNN:
+```python
+model = PlantDiseaseCNN(num_classes).to(device)
+criterion = nn.CrossEntropyLoss()
+optimizer = optim.AdamW(model.parameters(), lr=0.001, weight_decay=1e-2)
+scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'max', patience=3, factor=0.5)
+```
+- Huấn luyện mô hình với 40 epochs:
+```python
+for epoch in range(40):
+    model.train()
+    .......
+```
+- Vẽ biểu đồ sau huấn luyện:
+<img width="615" height="288" alt="image" src="https://github.com/user-attachments/assets/1ad6bf42-bd9d-4117-95ae-07d456f4ec61" />
+
+- In ra độ chính xác trên tập test:
+```python
+model.eval()
+correct, total = 0, 0
+with torch.no_grad():
+    for imgs, lbls in test_loader:
+        imgs, lbls = imgs.to(device), lbls.to(device)
+        out = model(imgs); _, pred = out.max(1); total += lbls.size(0); correct += pred.eq(lbls).sum().item()
+
+print(f"\n Độ chính xác trên tập test: {100. * correct / total:.2f}%")
+```
+<img width="262" height="29" alt="image" src="https://github.com/user-attachments/assets/620c87d3-5882-4f3d-9b69-0fa50cc0ff70" />  
+
+- Thử test trên bộ dữ liệu test:
+<img width="616" height="127" alt="image" src="https://github.com/user-attachments/assets/4e1811c3-26f9-4d93-94b4-549831607937" />  
+
+
+
+
+
+
+
 
 
 ## Phần 3: Cách sử dụng  
