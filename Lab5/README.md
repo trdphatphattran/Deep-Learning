@@ -193,6 +193,9 @@ visualize_feature_map()
 - Conv1: hiển thị rõ viền và nét của số 7 gồm đường chéo và đường ngang rõ ràng, độ cong và mép nét đều được giữ lại. Feature map vẫn giữ nhiều chi tiết không gian của ảnh gốc.  
 - Conv2: hiển thị các vùng chính của số 7 bao gồm vùng đầu số 7 được nhấn mạnh, các vùng còn lại mờ hơn. Ảnh trở nên thô hơn, tập trung vào hình dạng tổng quát.
 
+## CIFAR-10  
+
+
 ## Phần 3: Cách sử dụng  
 1. Cài pytorch (dùng terminal hoặc cmd):  
 pip3 install numpy
