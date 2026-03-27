@@ -76,3 +76,99 @@ $$
 Điều này cho thấy trọng số $W_{hh}$ được chia sẻ qua tất cả các bước thời gian, nên gradient cuối cùng là tổng đóng góp từ toàn bộ chuỗi.  
 
 ## Phần 2: Bài tập với RNN  
+### Bài 1:  
+Thực hiện các yêu cầu sau:
+
+- Chuẩn hóa dữ liệu về khoảng `[0, 1]` hoặc dùng chuẩn hóa z-score.
+- Tạo các chuỗi con với độ dài `seq_length = 20`.
+- Chia dữ liệu theo tỉ lệ:
+  - 70% cho tập huấn luyện
+  - 15% cho tập validation
+  - 15% cho tập kiểm tra
+ 
+```python
+data = (data - data.min()) / (data.max() - data.min())
+
+data = torch.FloatTensor(data).unsqueeze(1)
+
+seq_length = 20
+X, y = create_sequences(data_multi, seq_length)
+
+total_size = len(X)
+
+train_size = int(0.7 * total_size)
+val_size = int(0.15 * total_size)
+
+X_train = X[:train_size]
+y_train = y[:train_size]
+
+X_val = X[train_size:train_size + val_size]
+y_val = y[train_size:train_size + val_size]
+
+X_test = X[train_size + val_size:]
+y_test = y[train_size + val_size:]
+```
+### Bài 2:  
+Xây dựng mô hình RNN bằng PyTorch với cấu hình gợi ý như sau:
+
+- `input_size = 3`
+- `hidden_size = 32`
+- `output_size = 1`
+
+Yêu cầu trong quá trình huấn luyện:
+
+- Sử dụng hàm mất mát `MSELoss`.
+- Sử dụng bộ tối ưu `Adam`.
+- Huấn luyện mô hình trong `150 epochs`.
+- Lưu lại các giá trị sau:
+  - `train loss`
+  - `validation loss`
+ 
+```python
+class RNN(nn.Module):
+    def __init__(self, input_size=3, hidden_size=32, output_size=1):
+        super(RNN, self).__init__()
+        self.hidden_size = hidden_size
+        self.rnn = nn.RNN(input_size, hidden_size, batch_first=True)
+        self.fc = nn.Linear(hidden_size, output_size)
+    
+    def forward(self, x, hidden):
+        out, hidden = self.rnn(x, hidden)
+        out = self.fc(out[:, -1, :])  
+        return out, hidden
+    
+    def init_hidden(self, batch_size):
+        return torch.zeros(1, batch_size, self.hidden_size)
+
+model = RNN(input_size=3, hidden_size=32, output_size=1)
+criterion = nn.MSELoss()
+optimizer = torch.optim.Adam(model.parameters(), lr=0.01)
+
+num_epochs = 150
+batch_size = 16
+
+train_losses = []
+val_losses = []
+
+for epoch in range(num_epochs):
+    model.train()
+    total_train_loss = 0
+........
+```
+--> Kết quả:  
+<img width="416" height="384" alt="image" src="https://github.com/user-attachments/assets/961b1925-8607-42ee-aa72-43c8a01f2a74" />  
+
+### Bài 3:  
+Sau khi huấn luyện xong, thực hiện các yêu cầu sau:
+
+- Dự đoán trên tập test.
+- Tính các chỉ số đánh giá:
+  - `MSE`
+  - `MAE`
+- Vẽ biểu đồ so sánh:
+  - giá trị thực
+  - giá trị dự đoán
+ 
+```python
+
+```
